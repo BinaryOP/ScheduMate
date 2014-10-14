@@ -2,27 +2,56 @@ package com.app.schedumate;
 
 public class CourseDetails {
 	private long id;
-	private String comment;
+	private long courseNumber;
+	private String courseName;
+	private String location;
+	private String time;
 
-	public long getId() {
+	public long getID() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setID(long id) {
 		this.id = id;
 	}
 
-	public String getComment() {
-	  return comment;
+
+	public long getCourseNumber() {
+		return courseNumber;
 	}
 
-	public void setComment(String comment) {
-	  this.comment = comment;
+	public void setCourseNumber(long courseNumber) {
+		this.courseNumber = courseNumber;
 	}
 
-	  // Will be used by the ArrayAdapter in the ListView
+	public String getCourseName() {
+	  return courseName;
+	}
+
+	public void setCourseName(String courseName) {
+	  this.courseName = courseName;
+	}
+
+
+	public String getLocation() {
+		  return location;
+		}
+
+		public void setLocation(String location) {
+		  this.location = location;
+		}
+
+		public String getTime() {
+			  return time;
+			}
+
+			public void setTime(String time) {
+			  this.time = time;
+			}
+	
+	// Will be used by the ArrayAdapter in the ListView
 	  @Override
 	public String toString() {
-	  return comment;
+	  return courseName;
 	}
 }
