@@ -22,6 +22,10 @@ public class SchedumateDatabaseClass extends SQLiteOpenHelper {
 	public static final String COLUMN_COURSE_NUMBER = "Course_Number";
 	public static final String COLUMN_COURSE_LOCATION = "Course_Location";
 	public static final String COLUMN_COURSE_TIME = "Course_Time";
+	public static final String DATABASE_NAME = "course_details.db";
+	private static final int DATABASE_VERSION = 1;
+	
+	
 	
 	private static final String DATABASE_CREATE = "create table "
 		      + TABLE_COURSE_DETAILS + "(" + COLUMN_ID
@@ -31,9 +35,8 @@ public class SchedumateDatabaseClass extends SQLiteOpenHelper {
 		      + " text not null, " + COLUMN_COURSE_TIME
 		      + " text not null, );";
 
-	public SchedumateDatabaseClass(Context context, String name,
-			CursorFactory factory, int version) {
-		super(context, name, null, 1);
+	public SchedumateDatabaseClass(Context context) {
+		super(context, DATABASE_NAME, null, DATABASE_VERSION);
 		// TODO Auto-generated constructor stub
 	}
 
