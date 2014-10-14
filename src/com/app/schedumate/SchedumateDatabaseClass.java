@@ -1,3 +1,11 @@
+/*
+ * Author : Nikhil Mehta
+ * Date of Creation : 10/14/2014
+ * 
+ * This is the primary database class which will allow the user to score his personal schedule
+ * on the phone's database.
+ */
+
 package com.app.schedumate;
 
 import android.content.Context;

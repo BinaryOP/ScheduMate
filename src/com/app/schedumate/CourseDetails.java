@@ -1,3 +1,10 @@
+//Author : Nikhil Mehta
+//Date of Creation : 10/14/2014
+/*
+ * Helper class to add data into the database
+ * 
+ */
+
 package com.app.schedumate;
 
 public class CourseDetails {
