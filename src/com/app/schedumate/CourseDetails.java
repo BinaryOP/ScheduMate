@@ -7,6 +7,7 @@ public class CourseDetails {
 	private String location;
 	private String time;
 
+	// get ID
 	public long getID() {
 		return id;
 	}
@@ -15,7 +16,7 @@ public class CourseDetails {
 		this.id = id;
 	}
 
-
+//get the course number
 	public long getCourseNumber() {
 		return courseNumber;
 	}
@@ -23,7 +24,7 @@ public class CourseDetails {
 	public void setCourseNumber(long courseNumber) {
 		this.courseNumber = courseNumber;
 	}
-
+// get the course name
 	public String getCourseName() {
 	  return courseName;
 	}
@@ -32,24 +33,24 @@ public class CourseDetails {
 	  this.courseName = courseName;
 	}
 
-
+// get location of class
 	public String getLocation() {
 		  return location;
-		}
+	}
 
-		public void setLocation(String location) {
-		  this.location = location;
-		}
+	public void setLocation(String location) {
+	  this.location = location;
+	}
+// get time of class
+	public String getTime() {
+		  return time;
+	}
 
-		public String getTime() {
-			  return time;
-			}
-
-			public void setTime(String time) {
-			  this.time = time;
-			}
+	public void setTime(String time) {
+		  this.time = time;
+	}
 	
-	// Will be used by the ArrayAdapter in the ListView
+	
 	  @Override
 	public String toString() {
 	  return courseName;
