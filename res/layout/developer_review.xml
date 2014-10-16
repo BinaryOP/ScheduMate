@@ -14,7 +14,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/sendFeedBackBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -35,14 +35,14 @@
         android:id="@+id/ratingBar1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/editText1"
+        android:layout_alignRight="@+id/feedBackTextBox"
         android:layout_below="@+id/textView3" />
 
     <EditText
         android:id="@+id/editText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/button1"
+        android:layout_above="@+id/sendFeedBackBtn"
         android:layout_alignLeft="@+id/textView2"
         android:layout_marginBottom="14dp"
         android:ems="10" />
@@ -57,7 +57,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/feedBackTextBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView1"
@@ -73,8 +73,8 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText1"
-        android:layout_below="@+id/editText1"
+        android:layout_alignLeft="@+id/feedBackTextBox"
+        android:layout_below="@+id/feedBackTextBox"
         android:layout_marginTop="22dp"
         android:text="e-mail (Optional)"
         android:textAppearance="?android:attr/textAppearanceMedium" />

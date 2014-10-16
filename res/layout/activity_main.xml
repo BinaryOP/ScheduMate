@@ -37,7 +37,7 @@
         android:ems="10" />
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/feedBackTextBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView2"
@@ -58,7 +58,7 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/editText1"
+        android:layout_above="@+id/feedBackTextBox"
         android:layout_alignLeft="@+id/editText4"
         android:text="Course Number"
         android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -85,12 +85,22 @@
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/sendFeedBackBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="31dp"
         android:layout_toRightOf="@+id/textView1"
         android:text="Add" />
+
+    <Button
+        android:id="@+id/sendFeedbackBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/sendFeedBackBtn"
+        android:layout_alignBottom="@+id/sendFeedBackBtn"
+        android:layout_alignRight="@+id/textView4"
+        android:text="FeedBack" 
+        android:onClick="sendFeedback"/>
 
 </RelativeLayout>
