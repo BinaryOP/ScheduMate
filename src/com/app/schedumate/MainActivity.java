@@ -23,14 +23,15 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        add = new EventAdd(this.getApplicationContext());
     }
     
     public void onClickAdd(View view) {
     	open = false;
     	
-    	// Intent test_db = new Intent(this, TestDatabaseActivity.class);
-    	// startActivity(test_db);
-    	
+    	Intent test_db = new Intent(this, TestDatabaseActivity.class);
+    	startActivity(test_db);
     }
 
     // hello test commit

@@ -10,10 +10,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import android.content.Context;
+import android.support.v7.app.ActionBarActivity;
 
 import java.util.List;
 
-public class TestDatabaseActivity extends ListActivity {
+public class TestDatabaseActivity extends ActionBarActivity {
 	
 	private EventAdd addCourse;
 	private boolean added;
@@ -23,18 +24,9 @@ public class TestDatabaseActivity extends ListActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_test_database);
-		
-		addCourse = new EventAdd(this.getApplicationContext());
-		addCourse.open();
-		
-		List<CourseDetails> courses = addCourse.getAllCourses();
-		ArrayAdapter<CourseDetails> adapter = new ArrayAdapter<CourseDetails>(this, 
-				android.R.layout.simple_list_item_1, courses);
-		
-		setListAdapter(adapter);
 	}
 	
-	/*public boolean addCourseToDB(View view){
+	public void addCourseToDB(View view){
 		added = false;
 				
 		String course_name = null;
@@ -61,16 +53,31 @@ public class TestDatabaseActivity extends ListActivity {
 					Toast.LENGTH_LONG).show();
 		}
 		else {
-			MainActivity.add.open();
 			
-			long course_num = Long.parseLong(course_number);
-			added = MainActivity.add.createCourse(course_num, course_name, location, time);
-			
-			MainActivity.add.close();
+			try {
+				
+				MainActivity.add.open();
+				
+				long course_num = Long.parseLong(course_number);
+				added = MainActivity.add.createCourse(course_num, course_name, 
+						location, time);
+				
+				MainActivity.add.close();
+			} catch (Exception e) {
+				
+				String error_message = e.getMessage();
+				Toast.makeText(this.getApplicationContext(), 
+						error_message, Toast.LENGTH_LONG).show();
+			}
 		}
 		
-		return added;
-	}*/
+		String added_value;
+		
+		added_value = added ? "true" : "false";
+
+		Toast.makeText(this.getApplicationContext(), added_value, Toast.LENGTH_LONG).show();
+		
+	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
