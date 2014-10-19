@@ -14,11 +14,16 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.content.Context;
 import android.content.ContentValues;
+import android.util.Log;
+import android.widget.Toast;
 
 import java.util.List;
 import java.util.ArrayList;
 
 public class EventAdd {
+	
+	private static final String EVENTADD_TAG = "EventAdd";
+	Context context;
 	
 	private SQLiteDatabase db;
 	private SchedumateDatabaseClass sdc_helper;
@@ -31,10 +36,18 @@ public class EventAdd {
 	
 	public EventAdd(Context context){
 		sdc_helper = new SchedumateDatabaseClass(context);
+		this.context = context;
 	}
 	
 	public void open() throws SQLException {
-		db = sdc_helper.getWritableDatabase();
+		try{
+			db = sdc_helper.getWritableDatabase();
+		}catch(Exception e){
+			String errorMessage = e.getMessage();
+			Log.e(EVENTADD_TAG, errorMessage);
+			Toast.makeText(context, "ERROR!", Toast.LENGTH_LONG).show();
+		}
+		Toast.makeText(context, "TEST!", Toast.LENGTH_LONG).show();
 	}
 	
 	public void close() {
