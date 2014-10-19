@@ -8,10 +8,15 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.app.ListActivity;
 
+import java.util.List;
+import java.util.Random;
 
-public class MainActivity extends ActionBarActivity {
-	EventAdd test;
+public class MainActivity extends ListActivity {
+	private EventAdd test;
+	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +24,14 @@ public class MainActivity extends ActionBarActivity {
         
         test = new EventAdd(this.getApplicationContext());
         test.open();
+        
+        List<CourseDetails> values = test.getAllCourses();
+
+        // use the SimpleCursorAdapter to show the
+        // elements in a ListView
+        ArrayAdapter<CourseDetails> adapter = new ArrayAdapter<CourseDetails>(this,
+            android.R.layout.simple_list_item_1, values);
+        setListAdapter(adapter);
     }
 
     // hello test commit
