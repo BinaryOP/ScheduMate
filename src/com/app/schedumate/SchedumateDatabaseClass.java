@@ -25,15 +25,13 @@ public class SchedumateDatabaseClass extends SQLiteOpenHelper {
 	public static final String DATABASE_NAME = "course_details.db";
 	private static final int DATABASE_VERSION = 2;
 	
-	
-	
 	private static final String DATABASE_CREATE = "create table "
 		      + TABLE_COURSE_DETAILS + "(" + COLUMN_ID
 		      + " integer primary key autoincrement, " + COLUMN_COURSE_NAME
-		      + " text not null, " + COLUMN_COURSE_NUMBER
-		      + " text not null, " + COLUMN_COURSE_LOCATION
-		      + " text not null, " + COLUMN_COURSE_TIME
-		      + " text not null, );";
+		      + " text, " + COLUMN_COURSE_NUMBER
+		      + " text, " + COLUMN_COURSE_LOCATION
+		      + " text, " + COLUMN_COURSE_TIME
+		      + " text);";
 
 	public SchedumateDatabaseClass(Context context) {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);

@@ -16,11 +16,12 @@ import android.content.Context;
 import android.content.ContentValues;
 import android.util.Log;
 import android.widget.Toast;
+import android.view.View;
 
 import java.util.List;
 import java.util.ArrayList;
 
-public class EventAdd {
+public class EventAdd{
 	
 	private static final String EVENTADD_TAG = "EventAdd";
 	Context context;

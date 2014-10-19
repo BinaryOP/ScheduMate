@@ -11,13 +11,14 @@ import android.view.View;
 
 
 public class MainActivity extends ActionBarActivity {
-	
+	EventAdd test;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        
+        test = new EventAdd(this.getApplicationContext());
+        test.open();
     }
 
     // hello test commit
