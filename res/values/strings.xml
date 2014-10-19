@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-   
+
     <string name="app_name">ScheduMate</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_feed_back">FeedBackActivity</string>
     <string name="back">Home</string>
     <string name="event_header">Upcoming Events</string>
+    <string name="title_activity_test_database">TestDatabaseActivity</string>
+    <string name="addCourseToDB">ADD</string>
+    <string name="CourseName">Course Name</string>
+    <string name="CourseNumber">Course Number</string>
+    <string name="Location">Location</string>
+
 </resources>

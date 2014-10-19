@@ -15,23 +15,11 @@ import java.util.List;
 import java.util.Random;
 
 public class MainActivity extends ListActivity {
-	private EventAdd test;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        
-        test = new EventAdd(this.getApplicationContext());
-        test.open();
-        
-        List<CourseDetails> values = test.getAllCourses();
-
-        // use the SimpleCursorAdapter to show the
-        // elements in a ListView
-        ArrayAdapter<CourseDetails> adapter = new ArrayAdapter<CourseDetails>(this,
-            android.R.layout.simple_list_item_1, values);
-        setListAdapter(adapter);
     }
 
     // hello test commit

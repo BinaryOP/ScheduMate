@@ -57,6 +57,7 @@ public class EventAdd{
 	
 	public CourseDetails createCourse(long course_number, String course_name, String 
 			location, String time) {
+		
 		ContentValues values = new ContentValues();
 		CourseDetails cd = new CourseDetails();
 		
