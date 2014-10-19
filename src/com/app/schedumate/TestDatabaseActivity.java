@@ -34,53 +34,43 @@ public class TestDatabaseActivity extends ListActivity {
 		setListAdapter(adapter);
 	}
 	
-	public boolean addCourseToDB(final EventAdd add){
+	/*public boolean addCourseToDB(View view){
 		added = false;
-		Button add_course = (Button)findViewById(R.id.addCourseToDB);
+				
+		String course_name = null;
+		String course_number = null;
+		String location = null;
+		String time = null;
 		
-		mContext = this.getApplicationContext();
+		EditText course_name_et = (EditText)findViewById(R.id.CourseNameEditText);
+		course_name = course_name_et.getText().toString();
 		
-		add_course.setOnClickListener(new View.OnClickListener() {
+		EditText course_num_et = (EditText)findViewById(R.id.CourseNum);
+		course_number = course_num_et.getText().toString();
+		
+		EditText location_et = (EditText)findViewById(R.id.LocationEditText);
+		location = location_et.getText().toString();
+		
+		EditText time_et = (EditText)findViewById(R.id.TimeEditText);
+		time = time_et.getText().toString();
+		
+		if( course_name == null || course_number == null 
+				|| location == null || time == null ) {
+			Toast.makeText(mContext, 
+					"Make Sure you enter proper data in all the fields.", 
+					Toast.LENGTH_LONG).show();
+		}
+		else {
+			MainActivity.add.open();
 			
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				String course_name = null;
-				String course_number = null;
-				String location = null;
-				String time = null;
-				
-				EditText course_name_et = (EditText)findViewById(R.id.CourseNameEditText);
-				course_name = course_name_et.getText().toString();
-				
-				EditText course_num_et = (EditText)findViewById(R.id.CourseNum);
-				course_number = course_num_et.getText().toString();
-				
-				EditText location_et = (EditText)findViewById(R.id.LocationEditText);
-				location = location_et.getText().toString();
-				
-				EditText time_et = (EditText)findViewById(R.id.TimeEditText);
-				time = time_et.getText().toString();
-				
-				if( course_name == null || course_number == null 
-						|| location == null || time == null ) {
-					Toast.makeText(mContext, 
-							"Make Sure you enter proper data in all the fields.", 
-							Toast.LENGTH_LONG).show();
-				}
-				else {
-					add.open();
-					
-					long course_num = Long.parseLong(course_number);
-					added = add.createCourse(course_num, course_name, location, time);
-					
-					add.close();
-				}
-			}
-		});
+			long course_num = Long.parseLong(course_number);
+			added = MainActivity.add.createCourse(course_num, course_name, location, time);
+			
+			MainActivity.add.close();
+		}
 		
 		return added;
-	}
+	}*/
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

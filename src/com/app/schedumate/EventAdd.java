@@ -55,7 +55,7 @@ public class EventAdd{
 		sdc_helper.close();
 	}
 	
-	public CourseDetails createCourse(long course_number, String course_name, String 
+	public boolean createCourse(long course_number, String course_name, String 
 			location, String time) {
 		
 		ContentValues values = new ContentValues();
@@ -81,7 +81,7 @@ public class EventAdd{
 		CourseDetails newCourse = cursorToCourseDetails(cursor);
 		cursor.close();
 		
-		return newCourse;
+		return true;
 	}
 	
 	public void deleteCourse(CourseDetails course) {

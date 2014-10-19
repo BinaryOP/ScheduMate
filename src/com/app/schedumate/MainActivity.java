@@ -9,17 +9,28 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.app.ListActivity;
+import android.content.Intent;
 
 import java.util.List;
 import java.util.Random;
 
-public class MainActivity extends ListActivity {
+public class MainActivity extends ActionBarActivity {
+	
+	boolean open;
+	protected static EventAdd add;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
+    
+    public void onClickAdd(View view) {
+    	open = false;
+    	
+    	// Intent test_db = new Intent(this, TestDatabaseActivity.class);
+    	// startActivity(test_db);
+    	
     }
 
     // hello test commit
