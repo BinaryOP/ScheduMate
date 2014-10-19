@@ -12,5 +12,6 @@
     <string name="CourseName">Course Name</string>
     <string name="CourseNumber">Course Number</string>
     <string name="Location">Location</string>
+    <string name="time">Time</string>
 
 </resources>

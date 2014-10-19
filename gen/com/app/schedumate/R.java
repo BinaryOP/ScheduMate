@@ -1086,6 +1086,8 @@ containing a value of this type.
         public static final int CourseNumberEditText=0x7f050046;
         public static final int Location=0x7f050047;
         public static final int LocationEditText=0x7f050048;
+        public static final int Time=0x7f050049;
+        public static final int TimeEditText=0x7f05004a;
         public static final int action_bar=0x7f05001c;
         public static final int action_bar_activity_content=0x7f050015;
         public static final int action_bar_container=0x7f05001b;
@@ -1097,7 +1099,7 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f050016;
         public static final int action_menu_presenter=0x7f050017;
         public static final int action_mode_close_button=0x7f050024;
-        public static final int action_settings=0x7f05004f;
+        public static final int action_settings=0x7f050051;
         public static final int activity_chooser_view_content=0x7f050025;
         public static final int addCourse=0x7f050041;
         public static final int addCourseToDB=0x7f050042;
@@ -1110,8 +1112,8 @@ containing a value of this type.
         public static final int dialog=0x7f05000e;
         public static final int disableHome=0x7f050008;
         public static final int dropdown=0x7f05000f;
-        public static final int editText2=0x7f05004b;
-        public static final int editText3=0x7f05004e;
+        public static final int editText2=0x7f05004d;
+        public static final int editText3=0x7f050050;
         public static final int edit_query=0x7f050030;
         public static final int end=0x7f050013;
         public static final int expand_activities_button=0x7f050026;
@@ -1131,7 +1133,7 @@ containing a value of this type.
         public static final int progress_circular=0x7f050018;
         public static final int progress_horizontal=0x7f050019;
         public static final int radio=0x7f05002f;
-        public static final int ratingBar1=0x7f05004a;
+        public static final int ratingBar1=0x7f05004c;
         public static final int search_badge=0x7f050032;
         public static final int search_bar=0x7f050031;
         public static final int search_button=0x7f050033;
@@ -1152,9 +1154,9 @@ containing a value of this type.
         public static final int submit_area=0x7f050039;
         public static final int tabMode=0x7f050002;
         public static final int textView1=0x7f05003c;
-        public static final int textView2=0x7f05004c;
-        public static final int textView3=0x7f050049;
-        public static final int textView4=0x7f05004d;
+        public static final int textView2=0x7f05004e;
+        public static final int textView3=0x7f05004b;
+        public static final int textView4=0x7f05004f;
         public static final int title=0x7f05002b;
         public static final int top_action_bar=0x7f050020;
         public static final int up=0x7f050021;
@@ -1273,6 +1275,7 @@ containing a value of this type.
         public static final int back=0x7f0a0011;
         public static final int event_header=0x7f0a0012;
         public static final int hello_world=0x7f0a000e;
+        public static final int time=0x7f0a0018;
         public static final int title_activity_feed_back=0x7f0a0010;
         public static final int title_activity_test_database=0x7f0a0013;
     }

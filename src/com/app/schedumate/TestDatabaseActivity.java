@@ -12,6 +12,7 @@ import java.util.List;
 public class TestDatabaseActivity extends ListActivity {
 	
 	private EventAdd addCourse;
+	private boolean added;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,11 @@ public class TestDatabaseActivity extends ListActivity {
 				android.R.layout.simple_list_item_1, courses);
 		
 		setListAdapter(adapter);
+	}
+	
+	public boolean addCourseToDB(){
+		added = false;
+		return added;
 	}
 
 	@Override
