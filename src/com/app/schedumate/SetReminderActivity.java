@@ -1,18 +1,57 @@
 package com.app.schedumate;
 
+import java.util.Calendar;
+
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.Toast;
+
 
 public class SetReminderActivity extends ActionBarActivity {
-
+    private DatePicker picker;
+ 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_set_reminder);
-	}
+	        picker = (DatePicker) findViewById(R.id.scheduleTimePicker);
+	    }
 
+    public void onDateSelectedButtonClick(View v){
+        int day = picker.getDayOfMonth();
+        int month = picker.getMonth();
+        int year = picker.getYear();
+        
+        Calendar c = Calendar.getInstance();
+        c.set(year, month, day);
+        
+        EditText h = (EditText) findViewById(R.id.hour);
+		int hour = Integer.parseInt(h.getText().toString());
+		
+		EditText m = (EditText) findViewById(R.id.minute);
+		int minute = Integer.parseInt(m.getText().toString());
+		
+		EditText pmam = (EditText) findViewById(R.id.pmam);
+		int morningNight = Integer.parseInt(pmam.getText().toString());
+		
+		if(morningNight == 1) //pm
+			hour = hour + 12;
+        c.set(Calendar.HOUR_OF_DAY, hour);
+        c.set(Calendar.MINUTE, minute);
+        c.set(Calendar.SECOND, 0);
+        
+        new AlarmTask(this, c).run();
+
+        Toast.makeText(this, "Notification set for: "+ (month+1)+"/"+ day +"/"+ year + "at " + (hour-12) + ":" + minute , Toast.LENGTH_SHORT).show();
+    }
+     
+  
+    
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -31,4 +70,6 @@ public class SetReminderActivity extends ActionBarActivity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	
+
 }
