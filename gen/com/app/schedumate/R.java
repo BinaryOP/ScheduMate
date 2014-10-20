@@ -1216,14 +1216,16 @@ containing a value of this type.
         public static final int activity_examsched=0x7f030018;
         public static final int activity_feed_back=0x7f030019;
         public static final int activity_main=0x7f03001a;
-        public static final int activity_test_database=0x7f03001b;
-        public static final int developer_review=0x7f03001c;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001d;
+        public static final int activity_set_reminder=0x7f03001b;
+        public static final int activity_test_database=0x7f03001c;
+        public static final int developer_review=0x7f03001d;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001e;
     }
     public static final class menu {
         public static final int feed_back=0x7f0c0000;
         public static final int main=0x7f0c0001;
-        public static final int test_database=0x7f0c0002;
+        public static final int set_reminder=0x7f0c0002;
+        public static final int test_database=0x7f0c0003;
     }
     public static final class string {
         public static final int CourseName=0x7f0a0015;
@@ -1278,6 +1280,7 @@ containing a value of this type.
         public static final int hello_world=0x7f0a000e;
         public static final int time=0x7f0a0018;
         public static final int title_activity_feed_back=0x7f0a0010;
+        public static final int title_activity_set_reminder=0x7f0a001a;
         public static final int title_activity_test_database=0x7f0a0013;
     }
     public static final class style {

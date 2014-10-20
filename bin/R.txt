@@ -345,12 +345,14 @@ int layout abc_simple_decor 0x7f030017
 int layout activity_examsched 0x7f030018
 int layout activity_feed_back 0x7f030019
 int layout activity_main 0x7f03001a
-int layout activity_test_database 0x7f03001b
-int layout developer_review 0x7f03001c
-int layout support_simple_spinner_dropdown_item 0x7f03001d
+int layout activity_set_reminder 0x7f03001b
+int layout activity_test_database 0x7f03001c
+int layout developer_review 0x7f03001d
+int layout support_simple_spinner_dropdown_item 0x7f03001e
 int menu feed_back 0x7f0c0000
 int menu main 0x7f0c0001
-int menu test_database 0x7f0c0002
+int menu set_reminder 0x7f0c0002
+int menu test_database 0x7f0c0003
 int string CourseName 0x7f0a0015
 int string CourseNumber 0x7f0a0016
 int string Location 0x7f0a0017
@@ -376,6 +378,7 @@ int string event_header 0x7f0a0012
 int string hello_world 0x7f0a000e
 int string time 0x7f0a0018
 int string title_activity_feed_back 0x7f0a0010
+int string title_activity_set_reminder 0x7f0a001a
 int string title_activity_test_database 0x7f0a0013
 int style AppBaseTheme 0x7f0b008b
 int style AppTheme 0x7f0b008c
