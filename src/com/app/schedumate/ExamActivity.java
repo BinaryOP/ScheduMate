@@ -29,5 +29,5 @@ public class ExamActivity extends ActionBarActivity{
 		lv.setAdapter(adapter);
 	}
 	
-	
+	//Test commit
 }
