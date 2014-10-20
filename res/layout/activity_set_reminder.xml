@@ -11,6 +11,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:text="Enter any time and date to give an example of setting a reminder.\n\nThis reminder will be set in the future by automatically grabbing the data from the database." />
 
 </RelativeLayout>

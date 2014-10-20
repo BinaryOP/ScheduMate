@@ -60,5 +60,11 @@ public class MainActivity extends ActionBarActivity {
     	 	Intent intent = new Intent(this, FeedBackActivity.class);
     	    startActivity(intent);
     }
+    //Action handler for set reminder test button on first screen.
+    //Opens SetReminderActivity in App.
+    public void setReminder(View view){
+    	 	Intent intent = new Intent(this, SetReminderActivity.class);
+    	    startActivity(intent);
+    }
     
 }

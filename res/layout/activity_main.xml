@@ -28,4 +28,14 @@
         android:onClick="onClickAdd"
         android:text="@string/add" />
 
+    <Button
+        android:id="@+id/setReminderBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/sendFeedbackBtn"
+        android:layout_below="@+id/setReminderBtn"
+        android:layout_marginTop="14dp"
+        android:onClick="setReminder"
+        android:text="Set Reminder Test" />
+
 </RelativeLayout>
