@@ -11,24 +11,29 @@ import java.util.List;
 
 public class DisplayDatabase extends ListActivity {
 
+	//	STRING LIST TO DISPLAY COURSE NAMES
 	List<String> course_names = null;
-	int size_db = 0;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_display_database);
 		
+		//	OPENING THE DATABASE.
 		MainActivity.add.open();
 		
+		//	GETTING ALL THE COURSES.
 		List<CourseDetails> values = MainActivity.add.getAllCourses();
 		
+		//	DISPLAYING COURSE NAMES AS A STRING LIST.
 		course_names = new ArrayList<String>();
 		
+		//	GETTING ALL THE COURSE NAMES
 		for( CourseDetails temp : values ){
 			course_names.add(temp.getCourseName());
 		}
 		
+		//	DISPLAYING THE COURSES AS AN ADAPTER
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
 		        android.R.layout.simple_list_item_1, course_names);
 		setListAdapter(adapter);

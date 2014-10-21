@@ -9,17 +9,6 @@
     tools:context="com.app.schedumate.MainActivity" >
 
     <Button
-        android:id="@+id/sendFeedbackBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="94dp"
-        android:layout_marginTop="34dp"
-        android:onClick="sendFeedback"
-        android:text="FeedBack" />
-
-    <Button
         android:id="@+id/addCourse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,12 +18,22 @@
         android:text="@string/add" />
 
     <Button
+        android:id="@+id/sendFeedbackBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/addCourse"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:onClick="sendFeedback"
+        android:text="FeedBack" />
+
+    <Button
         android:id="@+id/setReminderBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/sendFeedbackBtn"
-        android:layout_below="@+id/setReminderBtn"
-        android:layout_marginTop="14dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
         android:onClick="setReminder"
         android:text="Set Reminder Test" />
 
@@ -42,9 +41,9 @@
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/setReminderBtn"
         android:layout_below="@+id/addCourse"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="21dp"
         android:onClick="onClickDisplayList"
         android:text="@string/display_list" />
 

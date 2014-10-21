@@ -31,6 +31,7 @@ public class CheckConnectivity {
 		WIFI = MOBILE_DATA = WIMAX = false;
 	}
 	
+	//	FUNCTION TO INITIALIZE CONNECTIVITY MANAGER.
 	private void init_cm() {
 		try {
 			connection_manager = (ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -39,6 +40,7 @@ public class CheckConnectivity {
 		}
 	}
 	
+	//	FUNCTION TO CHECK THE INTERNET CONNECTION.
 	private void checkConnection() {
 		init_cm();
 		
@@ -46,17 +48,20 @@ public class CheckConnectivity {
 		isConnected = (active_network != null && active_network.isConnectedOrConnecting());
 	}
 
+	//	FUNCTION TO CHECK CONNECTIVITY STATUS.
 	public boolean returnConnectivityStatus() {
 		this.checkConnection();
 		return this.isConnected;
 	}
 	
+	//	FUNCTION TO DETECT CONNECTION TYPE.
 	private void connectionType() {
 		WIFI = (active_network.getType() == ConnectivityManager.TYPE_WIFI);
 		MOBILE_DATA = (active_network.getType() == ConnectivityManager.TYPE_MOBILE);
 		WIMAX = (active_network.getType() == ConnectivityManager.TYPE_WIMAX);
 	}
 	
+	//	FUNCTION TO RETURN THE CONNECTION TYPE.
 	public int returnConnectionType() {
 		if( returnConnectivityStatus() ) {
 			this.connectionType();

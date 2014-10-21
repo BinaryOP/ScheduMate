@@ -22,7 +22,7 @@
         <!--
              <meta-data
             android:name="com.google.android.gms.version"
-            android:value="@integer/google_play_services_version" />
+            android:value="@integer/google_play_services_version" />
         -->
 
         <activity
@@ -49,6 +49,26 @@
         <activity
             android:name=".DisplayDatabase"
             android:label="@string/title_activity_display_database" >
+        </activity>
+        <activity
+            android:name=".EventDetails"
+            android:label="@string/title_activity_event_details" >
+        </activity>
+        <activity
+            android:name=".SchedumateHWDB"
+            android:label="@string/title_activity_schedumate_hwdb" >
+        </activity>
+        <activity
+            android:name=".SchedumateEventDB"
+            android:label="@string/title_activity_schedumate_event_db" >
+        </activity>
+        <activity
+            android:name=".HomeworkDBActivity"
+            android:label="@string/title_activity_homework_db" >
+        </activity>
+        <activity
+            android:name=".EventDBActivity"
+            android:label="@string/title_activity_event_db" >
         </activity>
     </application>
 
