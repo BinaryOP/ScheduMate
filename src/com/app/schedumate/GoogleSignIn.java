@@ -9,6 +9,3 @@
 
 // Package
 package com.app.schedumate;
-
-
-

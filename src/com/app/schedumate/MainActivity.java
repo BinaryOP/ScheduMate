@@ -33,6 +33,12 @@ public class MainActivity extends ActionBarActivity {
     	Intent test_db = new Intent(this, TestDatabaseActivity.class);
     	startActivity(test_db);
     }
+    
+    public void onClickDisplayList(View view) {
+    	
+    	Intent disp_db = new Intent(this, DisplayDatabase.class);
+    	startActivity(disp_db);
+    }
 
     // hello test commit
     @Override

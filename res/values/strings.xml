@@ -15,5 +15,7 @@
     <string name="time">Time</string>
     <string name="add">Add</string>
     <string name="title_activity_set_reminder">SetReminderActivity</string>
+    <string name="title_activity_display_database">DisplayDatabase</string>
+    <string name="display_list">Display List</string>
 
 </resources>

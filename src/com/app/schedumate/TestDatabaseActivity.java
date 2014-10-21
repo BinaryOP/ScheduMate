@@ -4,19 +4,13 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.app.ListActivity;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import android.content.Context;
 import android.support.v7.app.ActionBarActivity;
 
-import java.util.List;
-
 public class TestDatabaseActivity extends ActionBarActivity {
 	
-	private EventAdd addCourse;
 	private boolean added;
 	private Context mContext;
 
@@ -24,6 +18,8 @@ public class TestDatabaseActivity extends ActionBarActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_test_database);
+		
+		mContext = this.getApplicationContext();
 	}
 	
 	public void addCourseToDB(View view){
@@ -49,7 +45,7 @@ public class TestDatabaseActivity extends ActionBarActivity {
 		if( course_name == null || course_number == null 
 				|| location == null || time == null ) {
 			Toast.makeText(mContext, 
-					"Make Sure you enter proper data in all the fields.", 
+					"Enter proper data", 
 					Toast.LENGTH_LONG).show();
 		}
 		else {
@@ -71,9 +67,10 @@ public class TestDatabaseActivity extends ActionBarActivity {
 			}
 		}
 		
-		String added_value;
+		String added_value = "false";
 		
-		added_value = added ? "true" : "false";
+		if( added )
+			added_value = "true";
 
 		Toast.makeText(this.getApplicationContext(), added_value, Toast.LENGTH_LONG).show();
 		
