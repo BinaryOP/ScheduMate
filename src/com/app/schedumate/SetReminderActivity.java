@@ -3,23 +3,29 @@ package com.app.schedumate;
 import java.util.Calendar;
 
 import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.DatePicker;
-import android.widget.EditText;
+import android.widget.TextView;
+import 	android.widget.TimePicker;
 import android.widget.Toast;
 
 
 public class SetReminderActivity extends ActionBarActivity {
     private DatePicker picker;
- 
+    private TimePicker timepicker;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_set_reminder);
 	        picker = (DatePicker) findViewById(R.id.scheduleTimePicker);
+	        timepicker = (TimePicker) findViewById(R.id.scheduleTimePicker2);
 	    }
 
     public void onDateSelectedButtonClick(View v){
@@ -29,28 +35,21 @@ public class SetReminderActivity extends ActionBarActivity {
         
         Calendar c = Calendar.getInstance();
         c.set(year, month, day);
-        
-        EditText h = (EditText) findViewById(R.id.hour);
-		int hour = Integer.parseInt(h.getText().toString());
-		
-		EditText m = (EditText) findViewById(R.id.minute);
-		int minute = Integer.parseInt(m.getText().toString());
-		
-		EditText pmam = (EditText) findViewById(R.id.pmam);
-		int morningNight = Integer.parseInt(pmam.getText().toString());
-		
-		if(morningNight == 1) //pm
-			hour = hour + 12;
-        c.set(Calendar.HOUR_OF_DAY, hour);
-        c.set(Calendar.MINUTE, minute);
+
+        c.set(Calendar.HOUR_OF_DAY, timepicker.getCurrentHour());
+        c.set(Calendar.MINUTE, timepicker.getCurrentMinute());
         c.set(Calendar.SECOND, 0);
         
-        new AlarmTask(this, c).run();
+        Intent intent=new Intent(this,NotifyReceiver.class);
+        AlarmManager manager=(AlarmManager)getSystemService(Activity.ALARM_SERVICE);
+        PendingIntent pendingIntent=PendingIntent.getService(this,
+                0,intent, 0);
 
-        Toast.makeText(this, "Notification set for: "+ (month+1)+"/"+ day +"/"+ year + "at " + (hour-12) + ":" + minute , Toast.LENGTH_SHORT).show();
+        manager.setRepeating(AlarmManager.RTC_WAKEUP,c.getTimeInMillis(),24*60*60*1000,pendingIntent);
+
+       Toast.makeText(this, "Notification set for: "+ (month+1)+"/"+ day +"/"+ year + " at " + timepicker.getCurrentHour() + ":" + timepicker.getCurrentMinute() , Toast.LENGTH_SHORT).show();
+
     }
-     
-  
     
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

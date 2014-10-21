@@ -13,6 +13,11 @@
         android:id="@+id/scheduleTimePicker"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
+    
+     <TimePicker
+        android:id="@+id/scheduleTimePicker2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
  
     <Button
         android:id="@+id/selectButton"
@@ -20,37 +25,5 @@
         android:layout_height="wrap_content"
         android:onClick="onDateSelectedButtonClick"
         android:text="Set notification for this date" />
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_centerVertical="true"
-        android:text="Enter the time of the day. Entry one is hour. Entry two is minute. Entry three is pm/am 1 pm 0 am."
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <EditText
-        android:id="@+id/hour"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text" />
-
-    <EditText
-        android:id="@+id/minute"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text" >
-
-        <requestFocus />
-    </EditText>
-
-    <EditText
-        android:id="@+id/pmam"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text" />
 
 </LinearLayout>
