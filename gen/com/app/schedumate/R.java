@@ -1080,14 +1080,14 @@ containing a value of this type.
         public static final int ic_launcher=0x7f020057;
     }
     public static final class id {
-        public static final int CourseName=0x7f09004c;
-        public static final int CourseNameEditText=0x7f09004d;
-        public static final int CourseNum=0x7f09004e;
-        public static final int CourseNumberEditText=0x7f09004f;
-        public static final int Location=0x7f090050;
-        public static final int LocationEditText=0x7f090051;
-        public static final int Time=0x7f090052;
-        public static final int TimeEditText=0x7f090053;
+        public static final int CourseName=0x7f09004d;
+        public static final int CourseNameEditText=0x7f09004e;
+        public static final int CourseNum=0x7f09004f;
+        public static final int CourseNumberEditText=0x7f090050;
+        public static final int Location=0x7f090051;
+        public static final int LocationEditText=0x7f090052;
+        public static final int Time=0x7f090053;
+        public static final int TimeEditText=0x7f090054;
         public static final int action_bar=0x7f09001c;
         public static final int action_bar_activity_content=0x7f090001;
         public static final int action_bar_container=0x7f09001b;
@@ -1099,13 +1099,14 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f090002;
         public static final int action_menu_presenter=0x7f090003;
         public static final int action_mode_close_button=0x7f090024;
-        public static final int action_settings=0x7f090056;
+        public static final int action_settings=0x7f090057;
         public static final int activity_chooser_view_content=0x7f090025;
         public static final int addCourse=0x7f090045;
-        public static final int addCourseToDB=0x7f09004b;
+        public static final int addCourseToDB=0x7f09004c;
         public static final int always=0x7f09000f;
         public static final int beginning=0x7f090016;
         public static final int button1=0x7f09003d;
+        public static final int button2=0x7f090048;
         public static final int checkbox=0x7f09002d;
         public static final int collapseActionView=0x7f090010;
         public static final int default_activity_button=0x7f090028;
@@ -1134,9 +1135,9 @@ containing a value of this type.
         public static final int progress_circular=0x7f090004;
         public static final int progress_horizontal=0x7f090005;
         public static final int radio=0x7f09002f;
-        public static final int ratingBar1=0x7f090054;
-        public static final int scheduleTimePicker=0x7f090048;
-        public static final int scheduleTimePicker2=0x7f090049;
+        public static final int ratingBar1=0x7f090055;
+        public static final int scheduleTimePicker=0x7f090049;
+        public static final int scheduleTimePicker2=0x7f09004a;
         public static final int search_badge=0x7f090032;
         public static final int search_bar=0x7f090031;
         public static final int search_button=0x7f090033;
@@ -1147,7 +1148,7 @@ containing a value of this type.
         public static final int search_plate=0x7f090036;
         public static final int search_src_text=0x7f090037;
         public static final int search_voice_btn=0x7f09003b;
-        public static final int selectButton=0x7f09004a;
+        public static final int selectButton=0x7f09004b;
         public static final int sendFeedBackBtn=0x7f09003e;
         public static final int sendFeedbackBtn=0x7f090046;
         public static final int setReminderBtn=0x7f090047;
@@ -1161,7 +1162,7 @@ containing a value of this type.
         public static final int textView1=0x7f09003c;
         public static final int textView2=0x7f090041;
         public static final int textView3=0x7f090044;
-        public static final int textView4=0x7f090055;
+        public static final int textView4=0x7f090056;
         public static final int title=0x7f09002b;
         public static final int top_action_bar=0x7f090020;
         public static final int up=0x7f090021;

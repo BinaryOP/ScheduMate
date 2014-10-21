@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Toast;
 import android.content.Intent;
 
 import java.util.List;
@@ -38,6 +39,18 @@ public class MainActivity extends ActionBarActivity {
     	
     	Intent disp_db = new Intent(this, DisplayDatabase.class);
     	startActivity(disp_db);
+    }
+    
+    public void onClickDisplayConnectivityStatus(View view){
+    	CheckConnectivity status = new CheckConnectivity(this.getApplicationContext());
+    	
+    	String status_connection = "Not Connected";
+    	
+    	boolean status_conn = status.returnConnectivityStatus();
+    	if( status_conn )
+    		status_connection = "Connected";
+    	
+    	Toast.makeText(this.getApplicationContext(), status_connection, Toast.LENGTH_LONG).show();
     }
 
     // hello test commit
