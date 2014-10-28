@@ -22,5 +22,6 @@
     <string name="title_activity_schedumate_event_db">SchedumateEventDB</string>
     <string name="title_activity_homework_db">HomeworkDBActivity</string>
     <string name="title_activity_event_db">EventDBActivity</string>
+    <string name="title_activity_map">MapActivity</string>
 
 </resources>
