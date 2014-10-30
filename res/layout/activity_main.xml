@@ -1,3 +1,6 @@
+
+
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -28,16 +31,6 @@
         android:text="FeedBack" />
 
     <Button
-        android:id="@+id/setReminderBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="28dp"
-        android:onClick="setReminder"
-        android:text="Set Reminder Test" />
-
-    <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -51,10 +44,46 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button1"
+        android:layout_alignRight="@+id/setReminderBtn"
         android:layout_below="@+id/button1"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="22dp"
         android:onClick="onClickDisplayConnectivityStatus"
         android:text="Check Connection" />
+
+   <com.google.android.gms.common.SignInButton
+       android:id="@+id/btn_sign_in"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignLeft="@+id/button1"
+       android:layout_alignRight="@+id/button1"
+       android:layout_below="@+id/button2"
+       android:layout_marginTop="18dp" >
+   </com.google.android.gms.common.SignInButton>
+
+   <Button
+       android:id="@+id/setReminderBtn"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_above="@+id/sendFeedbackBtn"
+       android:layout_centerHorizontal="true"
+       android:layout_marginBottom="14dp"
+       android:onClick="setReminder"
+       android:text="Set Reminder Test" />
+   
+   	   <TextView
+   	       android:id="@+id/txtName"
+   	       android:layout_width="match_parent"
+   	       android:layout_height="wrap_content"
+   	       android:padding="5dp"
+   	       android:textSize="20dp" />
+
+   <Button
+       android:id="@+id/btn_sign_out"
+       android:layout_width="wrap_content"
+       android:layout_height="match_parent"
+       android:layout_alignRight="@+id/sendFeedbackBtn"
+       android:layout_alignTop="@+id/btn_sign_in"
+       android:visibility="gone"
+       android:text="@string/btn_logout_from_google" />
 
 </RelativeLayout>

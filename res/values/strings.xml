@@ -23,5 +23,5 @@
     <string name="title_activity_homework_db">HomeworkDBActivity</string>
     <string name="title_activity_event_db">EventDBActivity</string>
     <string name="title_activity_map">MapActivity</string>
-
+	<string name="btn_logout_from_google">Logout G+</string>
 </resources>

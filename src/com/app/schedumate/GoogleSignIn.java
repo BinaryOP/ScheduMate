@@ -8,4 +8,4 @@
  */
 
 // Package
-package com.app.schedumate;
+// Code is in MainActivity
