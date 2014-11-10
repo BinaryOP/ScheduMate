@@ -57,7 +57,7 @@ public class MainActivity extends ActionBarActivity implements OnClickListener,
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //G+
-        btnSignIn = (SignInButton) findViewById(R.id.btn_sign_in);
+   /*   btnSignIn = (SignInButton) findViewById(R.id.btn_sign_in);
         btnSignOut = (Button) findViewById(R.id.btn_sign_out);
         txtName = (TextView) findViewById(R.id.txtName);
         
@@ -70,7 +70,7 @@ public class MainActivity extends ActionBarActivity implements OnClickListener,
         .addScope(Plus.SCOPE_PLUS_LOGIN).build();
         
         //G+--end
-        add = new EventAdd(this.getApplicationContext());
+        add = new EventAdd(this.getApplicationContext());*/
     }
     
     public void onClickAdd(View view) {
