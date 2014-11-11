@@ -8,6 +8,8 @@ package com.app.schedumate;
 // TEST
 
 import android.support.v7.app.ActionBarActivity;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.IntentSender.SendIntentException;
 import android.os.Bundle;
@@ -21,6 +23,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.content.Intent;
 
+import java.util.Calendar;
 import java.util.List;
 import java.util.Random;
 
@@ -56,8 +59,9 @@ public class MainActivity extends ActionBarActivity implements OnClickListener,
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        /*
         //G+
-   /*   btnSignIn = (SignInButton) findViewById(R.id.btn_sign_in);
+        btnSignIn = (SignInButton) findViewById(R.id.btn_sign_in);
         btnSignOut = (Button) findViewById(R.id.btn_sign_out);
         txtName = (TextView) findViewById(R.id.txtName);
         
@@ -130,8 +134,7 @@ public class MainActivity extends ActionBarActivity implements OnClickListener,
     	 	Intent intent = new Intent(this, SetReminderActivity.class);
     	    startActivity(intent);
     }
-    
-    
+
     
     //Google+ Sign In Code - Aishwarya Ajay
     //Code Reference for G+ SignIn : "Android Login with Google Plus Account" - Ravi Tamada - AndroidAuthority.com

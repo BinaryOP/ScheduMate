@@ -20,7 +20,8 @@ import android.widget.Toast;
 public class SetReminderActivity extends ActionBarActivity {
     private DatePicker picker;
     private TimePicker timepicker;
-	@Override
+	private PendingIntent pendingIntent;
+    @Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_set_reminder);
@@ -40,15 +41,13 @@ public class SetReminderActivity extends ActionBarActivity {
         c.set(Calendar.MINUTE, timepicker.getCurrentMinute());
         c.set(Calendar.SECOND, 0);
         
-        Intent intent=new Intent(this,NotifyReceiver.class);
-        AlarmManager manager=(AlarmManager)getSystemService(Activity.ALARM_SERVICE);
-        PendingIntent pendingIntent=PendingIntent.getService(this,
-                0,intent, 0);
-
-        manager.setRepeating(AlarmManager.RTC_WAKEUP,c.getTimeInMillis(),24*60*60*1000,pendingIntent);
 
        Toast.makeText(this, "Notification set for: "+ (month+1)+"/"+ day +"/"+ year + " at " + timepicker.getCurrentHour() + ":" + timepicker.getCurrentMinute() , Toast.LENGTH_SHORT).show();
-
+       
+ 	  Intent myIntent = new Intent(SetReminderActivity.this, NotifyReceiver.class);
+ 	  pendingIntent = PendingIntent.getService(SetReminderActivity.this, 0, myIntent, 0);
+ 	  AlarmManager alarmManager = (AlarmManager)getSystemService(ALARM_SERVICE);
+ 	  alarmManager.set(AlarmManager.RTC_WAKEUP, c.getTimeInMillis(), pendingIntent);
     }
     
 	@Override

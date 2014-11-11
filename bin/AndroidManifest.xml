@@ -77,6 +77,7 @@
             android:name=".MapActivity"
             android:label="@string/title_activity_map" >
         </activity>
+        <service android:name=".NotifyReceiver" />
     </application>
 
 </manifest>
