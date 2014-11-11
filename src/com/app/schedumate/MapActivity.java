@@ -1,3 +1,6 @@
+//Google Maps implementation
+//Author : Nikhil Mehta
+
 package com.app.schedumate;
 
 import com.google.android.gms.maps.GoogleMap;
